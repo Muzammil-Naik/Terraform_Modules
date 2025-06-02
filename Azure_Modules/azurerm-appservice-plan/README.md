@@ -14,7 +14,7 @@ This Terraform module provides a streamlined, customizable way to deploy an Azur
 ### Example Usage 
 ```hcl
 module "app_service_plan" {
-  source               = "path/to/app-service-plan-module"
+  source               = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/azurerm-appservice-plan"
   
   rg_name              = "my-resource-group"
   location             = "eastus"

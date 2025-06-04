@@ -13,7 +13,7 @@ The module incorporates advanced lifecycle attributes to ensure safe and control
 ## Example 
 ```hcl 
 module "azurerm_virtual_network" { 
-    source                          = "path/to/module" 
+    source                          = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/azurerm_virtual_network" 
     Virtual_Network_Name            = "demo_vnet" 
     RG_Name_Vnet                    = "demo_rg" 
     Region_Vnet                     = "eastus" 

@@ -11,7 +11,7 @@ This Terraform module facilitates the deployment of Azure Resource Group with pr
 ### Example Usage: 
 ```hcl 
 module "Resource_Group" { 
-    source                      = "path/to/azurerm_resource_group_module" 
+    source                      = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/azurerm_resource-group" 
     Resource_Group_Name         = "Example" 
     Resource_Group_Location     =  "centralindia" 
     Resource_Group_Tags         =  {   

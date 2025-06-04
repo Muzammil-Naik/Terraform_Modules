@@ -12,7 +12,7 @@ This Terraform module facilitates the deployment of Multiple Azure Resource Grou
 ### Example Usage: 
 ```hcl 
 module "Resource_Group" { 
-    source                      = "path/to/azurerm_resource_group_module" 
+    source                      = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/azurerm_resource-group_multiple" 
     Resource_Group_Values       =  { 
                                         "First Resource Group Name"  = "First Resource Group Region/Location" 
                                         "Second Resource Group Name" = "Second Resource Group Region/Location" 

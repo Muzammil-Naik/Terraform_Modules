@@ -15,7 +15,7 @@ This Terraform module provides a flexible and reusable solution for deploying Wi
 ### Example Usage 
 ```hcl
 module "windows_vm" {
-    source             = "path/to/windows-vm-module"
+    source             = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/azurerm-virtual-machine-WindowsServer2016-Datacenter"
     rg_name            = "del" 
     vnet_name          = "eastus-vnet" 
     vnet_location      = "eastus" 

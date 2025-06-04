@@ -15,7 +15,7 @@ This Terraform module provides a flexible and reusable solution for deploying Re
 ### Example Usage 
 ```hcl
 module "windows_vm" {
-    source                = "path/to/windows-vm-module"
+    source                = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/azurerm_virtual_mahine_Windows"
     rg_name               = "Example-Rg" 
     rg_location           = "eastus" 
     rg_tags               = {   

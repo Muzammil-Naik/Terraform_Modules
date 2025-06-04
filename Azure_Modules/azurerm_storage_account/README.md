@@ -11,7 +11,7 @@ This Terraform module facilitates the deployment of Azure Storage Account. focus
 ### Example Usage: 
 ```hcl 
 module "Resource_Group" { 
-    source                              = "path/to/azurerm_resource_group_module" 
+    source                              = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/azurerm_storage_account" 
     Storage_Account_Name                = "Demo" 
     Storage_Account_RG_Name             = "Demo_RG" 
     Storage_Account_Replication_Type    = "LRS" 

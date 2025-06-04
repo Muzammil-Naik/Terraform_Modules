@@ -15,7 +15,7 @@ This Terraform module offers a simple solution for provisioning a Network Securi
 
 ```hcl
 module "network_security_group" {
-    source               = "path/to/windows-vm-module"
+    source               = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/azurerm_network_security_group"
     resource_group_name  = "my_resource_group"
     nsg_name             = "my_nsg"
     nsg_location             = "eastus"

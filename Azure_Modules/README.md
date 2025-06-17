@@ -11,34 +11,17 @@ The following reusable modules are included in this directory:
 - **`resource_group`** – Provision Azure Resource Groups with optional tags and location.
 - **`storage_account`** *(optional)* – Set up Azure Storage Accounts with access control and redundancy options.
 - **`nsg`** *(optional)* – Define Network Security Groups with custom inbound/outbound rules.
+- **`app_service_plan`** – Create scalable and flexible Azure App Service Plans for hosting web apps and function apps.
+- **`linux_function_app`** – Deploy event-driven Azure Linux Function Apps with Python runtime, integrated with existing app service plans and storage accounts.
 
 > Each module is self-contained with its own `main.tf`, `variables.tf`, `outputs.tf`, and `README.md`.
 
-## 🧩 Usage Example
+## 🧩 How to Use
 
-Here’s how you might use the `vm` and `vnet` modules together in a Terraform configuration:
+Each module can be included in your root Terraform configuration using a source path like:
 
 ```hcl
-module "resource_group" {
-  source     = "../azure/resource_group"
-  name       = "my-rg"
-  location   = "East US"
-}
-
-module "vnet" {
-  source         = "../azure/vnet"
-  name           = "my-vnet"
-  address_space  = ["10.0.0.0/16"]
-  location       = module.resource_group.location
-  resource_group = module.resource_group.name
-}
-
-module "vm" {
-  source            = "../azure/vm"
-  vm_name           = "web-server"
-  location          = module.resource_group.location
-  resource_group    = module.resource_group.name
-  subnet_id         = module.vnet.subnet_id
-  admin_username    = "azureuser"
-  admin_password    = "SuperSecurePassword123!"
+module "example_module" {
+  source = "github.com/<your-org-or-username>/Terraform_Modules//Azure_Modules/<module_name>"
+  # ...module-specific variables...
 }

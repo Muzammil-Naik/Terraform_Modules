@@ -22,6 +22,6 @@ Each module can be included in your root Terraform configuration using a source 
 
 ```hcl
 module "example_module" {
-  source = "github.com/<your-org-or-username>/Terraform_Modules//Azure_Modules/<module_name>"
+  source = "github.com/Muzammil-Naik/Terraform_Modules//Azure_Modules/<module_name>"
   # ...module-specific variables...
 }
